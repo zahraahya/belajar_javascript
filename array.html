@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Array</title>
+</head>
+<body>
+    <script>    
+        let hewan=["alpaka", "flamingo", "gorila"];
+        console.log(hewan.includes ("jerapah"));
+        console.log (hewan.indexOf("flamingo"));
+
+        let hewankaki4=["rusa", "kucing", "unta"];
+        let hewanlompat=["kelinci","kanguru"];
+        let hewanterbang=["merpati", "cenderawasih"];
+        let gabunganhewan= hewankaki4.concat(hewanlompat, hewanterbang);
+        console.log(gabunganhewan);
+
+        console.log(hewankaki4.slice(0,2));
+        hewankaki4.splice(0,1,"serigala");
+        console.log(hewankaki4);
+        console.log(hewankaki4.sort());
+
+        let hewanlompatBesar= hewanlompat.map(item=> {
+            return item.toUpperCase();}
+        );
+        console.log (hewanlompatBesar);
+
+        let angka=[1,5,7,9,20];
+        let angkaBesar= angka.filter (item=> {
+            return item >5;}
+        );
+        console.log(angkaBesar);
+
+        let buketBunga=[
+            {id:110, nama: "Mawar", harga: 50000},
+            {id:111, nama: "Melati", harga: 45000},
+            {id:112, nama: "Sepatu", harga: 47000}
+        ];
+        let produkDitemukan=buketBunga.find (item=> {
+            return item.id === 110;
+        });
+        console.log(produkDitemukan);
+
+        </script>
+</body>
+</html>
